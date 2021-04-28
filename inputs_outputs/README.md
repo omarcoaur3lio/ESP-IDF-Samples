@@ -1,11 +1,15 @@
 ## Entradas e saídas do ESP
 
-> Este é um exemplo básico de como utilizar o framework ESP-IDF para leitura e acionamento de entradas e saídas.
+> :bulb: Este é um exemplo básico de como utilizar o framework ESP-IDF para leitura e acionamento de entradas e saídas.
+
+<br>
 
 **Com ele é possível realizar:**
 
 - Leitura de uma entrada digital
 - Acionamento de uma saída digital
+
+<br>
 
 ### Circuito utilizado no exemplo
 
@@ -20,12 +24,14 @@
 - Push Button
 - Resistor 10K
 
+<br>
 
-```callout {type: 'info', title: 'Alternative method'}
-You could also do things like such-and such... blah blah
-
-And `markdown` should work *here* too
+:vertical_traffic_light: Atenção
 ```
+No circuito usado como exemplo, foi utilizado um Led RGB, 
+porém nada impede o uso de um Led convencional.
+```
+<br>
 
 **Conexões:**
 
