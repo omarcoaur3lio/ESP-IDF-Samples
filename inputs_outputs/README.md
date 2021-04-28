@@ -9,10 +9,9 @@
 
 ### Circuito utilizado no exemplo
 
-<figure align="center">
-   <img src="../.github/esp32_proto.png" alt="Esquemático" width="70%"/>
-   <figcaption>Circuito montado para o exemplo.</figcaption>  
-</figure>
+<p align="center">
+   <img src="../.github/esp32_proto.png" alt="Esquemático" width="70%"/>  
+</p>
 
 **Componentes utilizados:**
 
@@ -22,9 +21,13 @@
 - Resistor 10K
 
 
+{% hint style="info" %}
+Hello world
+{% endhint %}
+
 **Conexões:**
 
 | Componente       | Pino do ESP |
-| ------------------| ------------- |
-| Push Button        | 34                   |
-| Led                         | 33                   | 
+| -----------------| ----------- |
+| Push Button      | 34          |
+| Led              | 33          | 
