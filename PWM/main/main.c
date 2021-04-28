@@ -6,15 +6,15 @@
 #define LED (25)
 
 #define LEDC_TEST_DUTY             (6000) // Define a intensidade do LEd
-#define LEDC_TEST_FADE_TIME   (1000)
+#define LEDC_TEST_FADE_TIME   (1000) // Define o tempo máximo para o fade acontecer
 
 void app_main() {
 
     // Estrutura de configuração do timer
     ledc_timer_config_t timerParaLED = {
-        .duty_resolution  = LEDC_TIMER_13_BIT,    // resolution of PWM duty
-        .freq_hz                  = 5000,                               // frequency of PWM signal
-        .clk_cfg                   = LEDC_AUTO_CLK,          // Auto select the source clock
+        .duty_resolution  = LEDC_TIMER_13_BIT,    // resolução do PWM
+        .freq_hz                  = 5000,                               // frequencia para o PWM 
+        .clk_cfg                   = LEDC_AUTO_CLK,        
         .speed_mode        = LEDC_HIGH_SPEED_MODE
     };
     // Pode-se adicionar valores à propriedades diretamente

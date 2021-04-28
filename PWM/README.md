@@ -1,67 +1,45 @@
-# _LEDC Example_
+## Uso de PWM
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+> :bulb: Este é um exemplo básico de como utilizar o framework ESP-IDF para realizar o acionamento via PWM de saídas do ESP32.
 
-This example shows how to control intensity of LEDs using ESP32's on-board hardware LED PWM Controller module.
+<br>
 
-## How to use example
 
-### Hardware Required
+**Com ele é possível realizar:**
 
-* A development board with ESP32 SoC (e.g., ESP32-DevKitC, ESP-WROVER-KIT, etc.)
-* A USB cable for power supply and programming
+- Configuração PWM
+- Acionamento de uma saída via PWM
 
-Connect four LEDs to the following LEDC channels / individual GPIOs:
+<br>
 
-|ledc channel|GPIO|
-|:---:|:---:|
-|channel 0|GPIO18|
-|channel 1|GPIO19|
-|channel 2|GPIO4|
-|channel 3|GPIO5|
+A modulação por largura de pulso, mais conhecida pela sigla em inglês **[PWM](https://pt.wikipedia.org/wiki/Modula%C3%A7%C3%A3o_por_largura_de_pulso)** (*Pulse-Width Modulation*) - de um sinal ou em fontes de alimentação envolve a modulação de sua razão cíclica (`duty cycle`) para transportar qualquer informação sobre um canal de comunicação ou controlar o valor da alimentação entregue à carga.
 
-### Configure the project
+<br>
 
+### Circuito utilizado no exemplo
+
+<p align="center">
+   <img src="../.github/esp32_proto.png" alt="Esquemático" width="70%"/>  
+</p>
+
+**Componentes utilizados:**
+
+- [ESP32](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-devkitc.html)
+- Led RGB
+- Push Button
+- Resistor 10K
+
+<br>
+
+:vertical_traffic_light: Atenção
 ```
-idf.py menuconfig
+No circuito usado como exemplo foi utilizado um Led RGB, 
+porém nada impede o uso de um Led convencional.
 ```
+<br>
 
-### Build and Flash
+**Conexões:**
 
-Build the project and flash it to the board, then run monitor tool to view serial output:
-
-```
-idf.py -p PORT flash monitor
-```
-
-(To exit the serial monitor, type ``Ctrl-]``.)
-
-See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
-
-## Example Output
-
-Running this example, you will see each ledc's brightness changes differently
-
-* LEDC 1: Fade up / increase intensity
-* LEDC 2: Fade down / decrease intensity
-* LEDC 3: Keep a stable intensity
-* LEDC 4: LED is not on
-
-you can also see the following output log on the serial monitor:
-
-```
-1. LEDC fade up to duty = 4000
-2. LEDC fade down to duty = 0
-3. LEDC set duty = 4000 without fade
-4. LEDC set duty = 0 without fade
-...
-```
-
-## Troubleshooting
-
-* Programming fail
-
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
-
-For any technical queries, please open an [issue] (https://github.com/espressif/esp-idf/issues) on GitHub. We will get back to you soon.
+| Componente       | Pino do ESP |
+| -----------------| ----------- |
+| Led              | 25          | 
