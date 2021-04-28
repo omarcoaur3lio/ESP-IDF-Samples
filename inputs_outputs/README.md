@@ -28,7 +28,7 @@
 
 :vertical_traffic_light: Atenção
 ```
-No circuito usado como exemplo, foi utilizado um Led RGB, 
+No circuito usado como exemplo foi utilizado um Led RGB, 
 porém nada impede o uso de um Led convencional.
 ```
 <br>
