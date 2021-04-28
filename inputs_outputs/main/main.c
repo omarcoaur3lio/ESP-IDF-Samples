@@ -11,11 +11,11 @@ void app_main(void){
 	gpio_set_direction(LED, GPIO_MODE_OUTPUT); // Define o pino como saída
 	gpio_set_direction(BTN, GPIO_MODE_INPUT); // Define o pino como entrada
 
-	while(1) {
+	while(true) {
 
 	  while (!gpio_get_level( BTN )) {
-			gpio_set_level(LED, 0); // Define o nível do pino
+			gpio_set_level(LED, false); // Define o nível do pino
 	  }
-		gpio_set_level(LED, 1);
+		gpio_set_level(LED, true);
   }
 }
