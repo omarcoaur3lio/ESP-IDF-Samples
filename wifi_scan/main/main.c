@@ -19,7 +19,7 @@ static void wifi_scan(void) {
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT(); // Configura a wi-fi para os valores padrão
     ESP_ERROR_CHECK(esp_wifi_init(&cfg)); // Inicializa a wi-fi
 
-    uint16_t  numberForList = 10; // Número máx de redes a serem listadas
+    uint16_t  limiteParaListagem = 10; // Número máx de redes a serem listadas
 
     wifi_ap_record_t redes_encontradas[10]; // Array para armazenas as redes escaneadas
 
@@ -32,7 +32,7 @@ static void wifi_scan(void) {
     ESP_ERROR_CHECK(esp_wifi_start());
 
     ESP_ERROR_CHECK(esp_wifi_scan_start(NULL, true)); // Inicia a varredura sem uma configuração inicial
-    ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&numberForList, redes_encontradas)); // Preenche o array com as redes encontradas
+    ESP_ERROR_CHECK(esp_wifi_scan_get_ap_records(&limiteParaListagem, redes_encontradas)); // Preenche o array com as redes encontradas
     ESP_ERROR_CHECK(esp_wifi_scan_get_ap_num(&numeroRedesEncontradas));
 
     printf("\n");
@@ -41,7 +41,7 @@ static void wifi_scan(void) {
 
     printf("     SSID    | Channel | RSSI |       MAC  \n");            
 
-    for (int i = 0; (i < numberForList); i++) {
+    for (int i = 0; (i < limiteParaListagem); i++) {
         printf(
             "%12s | %7d | %4d |  %2x:%2x:%2x:%2x:%2x:%2x \n",
             redes_encontradas[i].ssid, 
