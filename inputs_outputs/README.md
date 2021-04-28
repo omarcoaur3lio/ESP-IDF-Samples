@@ -21,11 +21,11 @@
 - Resistor 10K
 
 
-{:note:}
+```callout {type: 'info', title: 'Alternative method'}
+You could also do things like such-and such... blah blah
 
-**Note:** Owners and administrators can add outside collaborators to a repository.
-
-{:endnote:}
+And `markdown` should work *here* too
+```
 
 **Conexões:**
 
