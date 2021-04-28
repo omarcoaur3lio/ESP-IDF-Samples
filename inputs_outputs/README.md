@@ -21,9 +21,11 @@
 - Resistor 10K
 
 
-{% hint style="info" %}
-Hello world
-{% endhint %}
+{% note %}
+
+**Note:** Owners and administrators can add outside collaborators to a repository.
+
+{% endnote %}
 
 **Conexões:**
 
