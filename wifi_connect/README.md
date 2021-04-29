@@ -13,11 +13,10 @@
 
 <br>
 
-> <br>
 > <br> Neste exemplo, assume-se que o usuário já possui o nome e a senha da rede em que pretende se conectar :wink:. 
-> <br>
 
 Essas informações devem ser preenchidas nas constantes `SSID` e `PASS`.
+
 <br>
 
 **Métodos utilizados para conexão e configuração**
