@@ -7,8 +7,8 @@
 #include "esp_wifi.h"
 #include "esp_log.h"
 
-#define SSID                "Synter Open"
-#define PASS                "2021.2021"
+#define SSID                "Meu SSID"
+#define PASS                "Minha Senha"
 #define TENTATIVAS    5
 
 static const char *IP = "Device IP";
