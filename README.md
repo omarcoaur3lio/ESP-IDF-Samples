@@ -5,3 +5,4 @@
 - [Inputs e Outputs](./inputs_outputs)
 - [Escaneamento Wi-Fi](./wifi_scan)
 - [Conexão com rede Wi-Fi](./wifi_connect)
+- [SmartConfig para Wi-Fi](./smart_config)
